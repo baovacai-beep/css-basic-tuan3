@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 2 - Định dạng văn bản</title>
     <style>
-        /* d. Lấy logo BIT với kích cỡ 30px làm hình nền lặp lại và cố định */
+        /* d. Lấy logo BIT kích cỡ 30px làm hình nền lặp lại và cố định */
         body {
             font-family: Arial, sans-serif;
             background-image: url("https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png");
@@ -25,7 +25,7 @@
             margin-bottom: 20px;
         }
 
-        /* b. Khoa CNTTD: chữ đỏ, canh phải, in nghiêng, viền chấm vàng bo góc, nền xám, 15px, mờ 50% */
+        /* b. Khoa CNTTD: chữ đỏ, canh phải, in nghiêng, viền chấm vàng, nền xám, 15px, mờ 50% */
         .khoa-cnttd {
             color: red;
             text-align: right;
@@ -39,15 +39,19 @@
             margin-bottom: 20px;
         }
 
-        /* c. Định dạng chữ BIT-UEH nổi 3D theo mẫu slide */
+        /* c. BIT-UEH hiệu ứng FLAMING theo công cụ HTML-CSS-JS */
         .bit-ueh {
-            color: #76b900;
+            color: #ffffff;
             font-size: 55px;
             font-weight: 800;
             text-align: center;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 0px #800000, 4px 4px 6px rgba(0, 0, 0, 0.7);
-            margin: 25px 0;
+            text-shadow: 0 -1px 4px #FFF, 
+                         0 -2px 10px #ff0, 
+                         0 -10px 20px #ff8000, 
+                         0 -18px 40px #F00, 
+                         2px 2px 7px rgba(206, 89, 55, 0.34);
+            margin: 30px 0;
         }
 
         /* e. Đoạn văn TMĐT: Rộng 100px, Cao 50px, ẩn tràn, cắt chữ ... và nowrap */
@@ -70,10 +74,10 @@
     <!-- a. Đại học UEH -->
     <p id="university">Đại học UEH</p>
 
-    <!-- b. Khoa CNTTĐ -->
+    <!-- b. Khoa CNTTD -->
     <p class="khoa-cnttd">Khoa CNTTD</p>
 
-    <!-- c. BIT-UEH -->
+    <!-- c. BIT-UEH với hiệu ứng Flaming -->
     <p class="bit-ueh">BIT-UEH</p>
 
     <!-- e. Đoạn văn bản xử lý tràn (Overflow) -->
