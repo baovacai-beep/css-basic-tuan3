@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Định dạng văn bản</title>
+    <style>
+        /* d. Lấy logo BIT với kích cỡ 30px làm hình nền lặp lại và cố định */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png");
+            background-size: 30px;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            margin: 20px;
+        }
+
+        /* a. Đại học UEH: chữ xanh, canh giữa, in đậm, gạch chân, 30px */
+        #university {
+            color: blue;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        /* b. Khoa CNTTD: chữ đỏ, canh phải, in nghiêng, viền chấm vàng bo góc, nền xám, 15px, mờ 50% */
+        .khoa-cnttd {
+            color: red;
+            text-align: right;
+            font-style: italic;
+            border: 2px dotted yellow;
+            border-radius: 12px;
+            background: gray;
+            font-size: 15px;
+            opacity: 0.5;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* c. Định dạng chữ BIT-UEH nổi 3D theo mẫu slide */
+        .bit-ueh {
+            color: #76b900;
+            font-size: 55px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px #800000, 4px 4px 6px rgba(0, 0, 0, 0.7);
+            margin: 25px 0;
+        }
+
+        /* e. Đoạn văn TMĐT: Rộng 100px, Cao 50px, ẩn tràn, cắt chữ ... và nowrap */
+        .truncate-text {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: #ffffff;
+            border: 1px solid #333333;
+            padding: 5px;
+            margin: 0 auto;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- a. Đại học UEH -->
+    <p id="university">Đại học UEH</p>
+
+    <!-- b. Khoa CNTTĐ -->
+    <p class="khoa-cnttd">Khoa CNTTD</p>
+
+    <!-- c. BIT-UEH -->
+    <p class="bit-ueh">BIT-UEH</p>
+
+    <!-- e. Đoạn văn bản xử lý tràn (Overflow) -->
+    <p class="truncate-text">
+        Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ Gia Bảo - Bài Tập CSS Cơ Bản (Tuần 3)</title>
+  <!-- Nhúng Font Awesome 6 theo yêu cầu Câu 9 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0b74e5;
+      --primary-dark: #0052cc;
+      --text: #1e293b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Profile Header */
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 35px;
+    }
+
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #f59e0b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .profile-info h1 {
+      font-size: 24px;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .profile-info p {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .social-links a {
+      color: var(--primary);
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-2px);
+      color: var(--primary-dark);
+    }
+
+    /* Assignment Grid */
+    h2.section-heading {
+      font-size: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+    }
+
+    .grid-assignments {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .assignment-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .assignment-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(11, 116, 229, 0.12);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: #eef6ff;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .btn-view {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-view:hover {
+      background-color: var(--primary-dark);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Profile Card (Thông tin cá nhân & Social Link) -->
+    <header class="profile-card">
+      <div class="profile-avatar">GB</div>
+      <div class="profile-info">
+        <h1>Hồ Gia Bảo</h1>
+        <p><i class="fa-solid fa-graduation-cap"></i> Sinh viên Đại học Kinh tế TP. Hồ Chí Minh (UEH) - Khóa 50</p>
+        <p><i class="fa-solid fa-code"></i> Chuyên ngành: Kỹ thuật Phần mềm</p>
+        <p><i class="fa-solid fa-book-bookmark"></i> Học phần: Phát triển ứng dụng Web & Thương mại điện tử</p>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:bao.hogia@ueh.edu.vn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="section-heading"><i class="fa-solid fa-list-check"></i> Danh Sách Bài Tập CSS Cơ Bản (Tuần 3)</h2>
+
+    <!-- Grid danh sách bài tập -->
+    <div class="grid-assignments">
+      
+      <!-- Bài 2 -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-font"></i></div>
+            <div class="card-title">Bài tập 2</div>
+          </div>
+          <p class="card-desc">Định dạng chữ UEH, Khoa CNTTD, BIT-UEH nổi 3D, nền logo BIT lặp cố định và cắt chữ ellipsis.</p>
+        </div>
+        <a href="BaiTap2.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 4 -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-bars"></i></div>
+            <div class="card-title">Bài tập 4</div>
+          </div>
+          <p class="card-desc">Định dạng danh sách ul/li môn học (TMDT, ERP, MIS, DS) thành thanh điều hướng hàng ngang.</p>
+        </div>
+        <a href="BaiTap4.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 5 -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+            <div class="card-title">Bài tập 5</div>
+          </div>
+          <p class="card-desc">Giao diện Best Shared Hosting Company căn giữa với các nút bấm hiện đại (View Plans, All Features).</p>
+        </div>
+        <a href="BaiTap5.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 6 -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-grip"></i></div>
+            <div class="card-title">Bài tập 6</div>
+          </div>
+          <p class="card-desc">Thiết kế My Portfolio với thanh lọc Tabs và hệ thống lưới ảnh 3 cột đều đặn dùng clearfix.</p>
+        </div>
+        <a href="BaiTap6.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 7 -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+            <div class="card-title">Bài tập 7</div>
+          </div>
+          <p class="card-desc">Bố cục dàn trang kinh điển với Wrapper bao bọc Header, Nav, Main và Footer bằng CSS Float.</p>
+        </div>
+        <a href="BaiTap7.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 8a -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="card-title">Bài tập 8a</div>
+          </div>
+          <p class="card-desc">Heroes of JavaScript and HTML khung chuẩn 960px, định vị văn bản nổi đè lên thẻ nhân vật.</p>
+        </div>
+        <a href="BaiTap8a.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Bài 8b -->
+      <div class="assignment-card">
+        <div>
+          <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-mask"></i></div>
+            <div class="card-title">Bài tập 8b</div>
+          </div>
+          <p class="card-desc">The Bat Family 1024px với hiệu ứng co giãn Accordion và nút "Read more" khi hover chuột.</p>
+        </div>
+        <a href="BaiTap8b.html" class="btn-view">Xem bài làm <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

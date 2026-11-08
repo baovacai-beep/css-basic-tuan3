@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Bat Family - CSS Accordion</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 40px 0;
+    }
+
+    /* i. Khung chứa lớn: 1024px; canh giữa */
+    .container {
+      width: 1024px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ii. site-header */
+    .site-header {
+      text-align: center;
+      margin-bottom: 30px;
+      background: linear-gradient(180deg, #1f2937, #111827);
+      padding: 16px;
+      border-radius: 8px;
+      color: #f59e0b;
+      text-shadow: 2px 2px 4px #000000;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* iii. Danh sách superheroes */
+    .superheroes {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    /* li: chiều rộng ban đầu, transition co giãn */
+    .superheroes li {
+      width: 180px;
+      height: 380px;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: width 0.4s ease, transform 0.3s ease;
+      background-color: #000000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* iv. Hình trong superheroes */
+    .superheroes li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease;
+    }
+
+    /* Tiêu đề tên nhân vật */
+    .superheroes .hero-name {
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+      z-index: 2;
+    }
+
+    /* v. Thẻ a trong superheroes (Read more) */
+    .superheroes li .read-more {
+      display: none; /* Ban đầu ẩn */
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      background-color: rgba(245, 158, 11, 0.9);
+      color: #111827;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      z-index: 3;
+    }
+
+    /* vi. Hover interactions */
+    /* 1. Tăng chiều rộng khi hover */
+    .superheroes li:hover {
+      width: 260px;
+    }
+
+    .superheroes li:hover img {
+      filter: brightness(1);
+    }
+
+    /* 2. Hiển thị Read more và gạch chân khi hover vào link */
+    .superheroes li:hover .read-more {
+      display: block;
+    }
+
+    .superheroes li .read-more:hover {
+      text-decoration: underline;
+      background-color: #f59e0b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">The Bat Family</header>
+
+    <ul class="superheroes">
+      <!-- 1. Batman -->
+      <li>
+        <span class="hero-name">Batman</span>
+        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=400&q=80" alt="Batman">
+        <a href="#" class="read-more">Read more</a>
+      </li>
+
+      <!-- 2. Batwing -->
+      <li>
+        <span class="hero-name">Batwing</span>
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" alt="Batwing">
+        <a href="#" class="read-more">Read more</a>
+      </li>
+
+      <!-- 3. Batgirl -->
+      <li>
+        <span class="hero-name">Batgirl</span>
+        <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80" alt="Batgirl">
+        <a href="#" class="read-more">Read more</a>
+      </li>
+
+      <!-- 4. Nightwing -->
+      <li>
+        <span class="hero-name">Nightwing</span>
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=400&q=80" alt="Nightwing">
+        <a href="#" class="read-more">Read more</a>
+      </li>
+
+      <!-- 5. Red Robin -->
+      <li>
+        <span class="hero-name">Red Robin</span>
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Red Robin">
+        <a href="#" class="read-more">Read more</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
